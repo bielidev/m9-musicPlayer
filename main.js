@@ -19,23 +19,72 @@ let updateTimer;
 let curr_track = document.createElement("audio");
 // Define the list of tracks that have to be played
 let track_list = [
+  // 10 canciones 
   {
-    name: "Night Owl",
-    artist: "Broke For Free",
-    image: "Image URL",
-    path: "Night_Owl.mp3",
+    name: "Master of Puppets",
+    artist: "Metalica",
+    image: "https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/201711/06/00105111367511____1__640x640.jpg",
+    path: "../src/puppets.mp3",
   },
   {
-    name: "Enthusiast",
-    artist: "Tours",
-    image: "Image URL",
-    path: "Enthusiast.mp3",
+    name: "La Costa del Silencio",
+    artist: "Mägo de Oz",
+    image: "https://i.scdn.co/image/ab67616d0000b273b637449c74ec8501ed2e03aa",
+    path: "../src/costaSilencio.mp3",
   },
   {
-    name: "Shipping Lanes",
-    artist: "Chad Crouch",
-    image: "Image URL",
-    path: "Shipping_Lanes.mp3",
+    name: "La Posada de los Muertos",
+    artist: "Mägo de Oz",
+    image: "https://i.scdn.co/image/ab67616d0000b273b637449c74ec8501ed2e03aa",
+    path: "../src/posada.mp3",
+  },
+  {
+    name: "La Cruz de Santiago",
+    artist: "Mägo de Oz",
+    image: "https://www.granviadiscos.com/wp-content/uploads/2023/05/finisterra-opera-rock.jpg",
+    path: "../src/cruzSantiago.mp3",
+  },
+  {
+    name: "Todo tiene su fin",
+    artist: "El Barrio",
+    image: "https://m.media-amazon.com/images/I/511RXRK1A9L._AC_UF894,1000_QL80_.jpg",
+    path: "../src/barrio.mp3",
+  },
+  {
+    name: "Paint it Black",
+    artist: "The Rolling Stones",
+    image: "https://m.media-amazon.com/images/I/91URz+ZyLhL._UF1000,1000_QL80_.jpg",
+    path: "../src/rolling.mp3",
+  },
+  {
+    name: "Tu Calorro",
+    artist: "Estopa",
+    image: "https://i.scdn.co/image/ab67616d0000b2731a311570340a4f6530da158b",
+    path: "../src/calorro.mp3",
+  },
+  {
+    name: "Bring to Life",
+    artist: "Evanescence",
+    image: "https://i.scdn.co/image/ab67616d0000b27325f49ab23f0ec6332efef432",
+    path: "../src/evanescence.mp3",
+  },
+  {
+    name: "Hot 'n Cold",
+    artist: "Katty Perry",
+    image: "https://m.media-amazon.com/images/I/511RXRK1A9L._AC_UF894,1000_QL80_.jpg",
+    path: "../src/perry.mp3",
+  },
+  {
+    name: "Wake Me Up",
+    artist: "Avicii",
+    image: "https://i.discogs.com/7Ypd8KvM6xx8p4JCnvHfyU7WGVBukVvAzXAPU-azscQ/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMjky/NjQ3LTE1Nzg1NDQ3/MzktOTE5Ny5qcGVn.jpeg",
+    path: "../src/avicii.mp3",
+  },
+  {
+    name: "Wake Me Up Before You Go-Go",
+    artist: "Wham!",
+    image: "https://i.discogs.com/cqETO0UKO1svSoJByxyHUX_eDiVSN6eDY2aAnRVRpeo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU2NDQ3/Ni0xMzE2NjA2MDIx/LmpwZWc.jpeg",
+    path: "../src/wham.mp3",
   },
 ];
 
