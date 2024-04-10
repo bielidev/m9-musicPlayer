@@ -1,7 +1,12 @@
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
-    background-color: lightgreen;
-    /* Smoothly transition the background color */
-    transition: background-color 0.5s;
+        background: linear-gradient(white, rgb(130, 129, 129));
 }
 
 /* Using flex with the column direction to
@@ -136,3 +141,41 @@ i.fa-step-forward,
 i.fa-step-backward {
     cursor: pointer;
 }
+
+.player-list {
+    margin: auto;
+    padding: 24px;
+    background: #000000;
+    list-style: none;
+    width: 27rem;
+  }
+  .player-list li {
+    margin-bottom: 18px;
+    cursor: pointer;
+  }
+  .player-list li .list-cover,
+  .player-list li .list-info {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .player-list li .list-cover.list-cover,
+  .player-list li .list-info.list-cover {
+    margin-right: 9px;
+    width: 3rem;
+    height: auto;
+    border-radius: 100%;
+  }
+  .player-list li .list-cover.list-info .info-title,
+  .player-list li .list-info.list-info .info-title {
+    margin-bottom: 3px;
+    font-size: 1.2rem;
+    color: #c2c2c2;
+  }
+  .player-list li .list-cover.list-info .info-artist,
+  .player-list li .list-info.list-info .info-artist {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  .player-list li:last-child {
+    margin-bottom: 0;
+  }

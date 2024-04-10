@@ -3,52 +3,187 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Music Player">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Roberto">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Music Player</title>
-    <!-- Load FontAwesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <!-- Load the custom CSS style file -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="description" content="Music Player" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="Roberto" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Music Player</title>
+  <!-- Load FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <!-- Bootstrap import -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- Load the custom CSS style file -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-    <main class="player">
-        <!-- Define the section for displaying details -->
-        <section class="details">
-            <div class="now-playing">PLAYING x OF y</div>
-            <div class="track-art"></div>
-            <div class="track-name">Track Name</div>
-            <div class="track-artist">Track Artist</div>
-        </section>
-        <!-- Define the section for displaying track buttons -->
-        <section class="buttons">
-            <div class="prev-track" onclick="prevTrack()">
-                <i class="fa fa-step-backward fa-2x"></i>
-            </div>
-            <div class="playpause-track" onclick="playpauseTrack()">
-                <i class="fa fa-play-circle fa-5x"></i>
-            </div>
-            <div class="next-track" onclick="nextTrack()">
-                <i class="fa fa-step-forward fa-2x"></i>
-            </div>
-        </section>
-        <!-- Define the section for displaying the seek slider-->
-        <section class="slider_container">
-            <div class="current-time">00:00</div>
-            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-            <div class="total-duration">00:00</div>
-        </section>
-        <!-- Define the section for displaying the volume slider-->
-        <section class="slider_container">
-            <i class="fa fa-volume-down"></i>
-            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
-            <i class="fa fa-volume-up"></i>
-        </section>
+  <div class="container col-12 d-flex">
+    <main class="player container col-8">
+      <!-- Define the section for displaying details -->
+      <section class="details">
+        <div class="now-playing">PLAYING x OF y</div>
+        <div class="track-art"></div>
+        <div class="track-name">Track Name</div>
+        <div class="track-artist">Track Artist</div>
+      </section>
+      <!-- Define the section for displaying track buttons -->
+      <section class="buttons">
+        <div class="prev-track" onclick="prevTrack()">
+          <i class="fa fa-step-backward fa-2x"></i>
+        </div>
+        <div class="playpause-track" onclick="playpauseTrack()">
+          <i class="fa fa-play-circle fa-5x"></i>
+        </div>
+        <div class="next-track" onclick="nextTrack()">
+          <i class="fa fa-step-forward fa-2x"></i>
+        </div>
+      </section>
+      <!-- Define the section for displaying the seek slider-->
+      <section class="slider_container">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" />
+        <div class="total-duration">00:00</div>
+      </section>
+      <!-- Define the section for displaying the volume slider-->
+      <section class="slider_container">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()" />
+        <i class="fa fa-volume-up"></i>
+      </section>
     </main>
+    <!-- PLAYLIST -->
+    <aside class="container col-4 d-flex flex-column justify-content-center text-center">
+      <h2 class="fw-light fs-3">My Playlist through the years</h2>
+      <section class="text-start">
+        <ul class="player-list rounded-3">
+          <li>
+            <img class="list-cover"
+              src="https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/201711/06/00105111367511____1__640x640.jpg" />
+            <div class="list-info">
+              <div class="info-title">Master of Puppets</div>
+              <div class="info-artist">Metallica</div>
+            </div>
+          </li>
+          <li>
+            <img class="list-cover" src="https://i.scdn.co/image/ab67616d0000b273b637449c74ec8501ed2e03aa" />
+            <div class="list-info">
+              <div class="info-title">La Costa del Silencio</div>
+              <div class="info-artist">Mägo de Oz</div>
+            </div>
+          </li>
+          <li>
+            <img class="list-cover" src="https://m.media-amazon.com/images/I/618KRNqUL-L._UXNaN_FMwebp_QL85_.jpg" />
+            <div class="list-info">
+              <div class="info-title">La Posada de los Muertos</div>
+              <div class="info-artist">Mägo de Oz</div>
+            </div>
+          </li>
+          <li>
+            <img class="list-cover"
+              src="https://www.granviadiscos.com/wp-content/uploads/2023/05/finisterra-opera-rock.jpg" />
+            <div class="list-info">
+              <div class="info-title">La Cruz de Santiago</div>
+              <div class="info-artist">Mägo de Oz</div>
+            </div>
+          </li>
+          <li>
+            <img class="list-cover" src="https://m.media-amazon.com/images/I/613XT7mqtqL._UXNaN_FMwebp_QL85_.jpg" />
+            <div class="list-info">
+              <div class="info-title">Todo Tiene Su Fin</div>
+              <div class="info-artist">El Barrio</div>
+            </div>
+          </li>
+          <li>
+            <img class="list-cover" src="https://m.media-amazon.com/images/I/91URz+ZyLhL._UF1000,1000_QL80_.jpg" />
+            <div class="list-info">
+              <div class="info-title">Paint it Black</div>
+              <div class="info-artist">The Rolling Stones</div>
+            </div>
+          </li>
+          <li>
+            <img class="list-cover" src="https://m.media-amazon.com/images/I/51qW4nMi7eL._UF894,1000_QL80_.jpg" />
+            <div class="list-info">
+              <div class="info-title">Tu Calorro</div>
+              <div class="info-artist">
+                Estopa con Muchachito Bombo Infierno
+              </div>
+            </div>
+          </li>
+          <li>
+            <img class="list-cover" src="https://i.scdn.co/image/ab67616d0000b27325f49ab23f0ec6332efef432" />
+            <div class="list-info">
+              <div class="info-title">Bring to Life</div>
+              <div class="info-artist">Evanescence</div>
+            </div>
+          </li>
+          <li>
+            <img class="list-cover" src="https://www.musicroom.com/product/image/medium/dam97358_0.jpg"
+              />
+              <div class="list-info">
+            <div class="info-title">Hot 'n Cold</div>
+            <div class="info-artist">Katy Perry</div>
+              </div>
+         </li>
+          <li>
+            <img class="list-cover"
+              src="https://i.discogs.com/7Ypd8KvM6xx8p4JCnvHfyU7WGVBukVvAzXAPU-azscQ/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMjky/NjQ3LTE1Nzg1NDQ3/MzktOTE5Ny5qcGVn.jpeg" />
+            <div class="list-info">
+              <div class="info-title">Wake Me Up</div>
+              <div class="info-artist">Avicii</div>
+            </div>
+          </li>
+          <li>
+            <img class="list-cover" src="https://m.media-amazon.com/images/I/516j8tw2uTL._UX250_FMwebp_QL85_.jpg" />
+            <div class="list-info">
+              <div class="info-title">Wake Me Up Before You Go-Go</div>
+              <div class="info-artist">Wham!</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </aside>
+<!-- END PLAYLIST -->
+  </div>
+
+  <!-- Artist Section -->
+    <div class="col-12 container mb-4">
+      <h2 class="fw-light fs-1">Artist Bio</h2>
+      <!-- Artist Info -->
+      <div class="col-12 d-flex">
+        <div class="image-container col-4">
+          <img class="rounded-3" style="height: 20rem; width: 20rem"
+            src="" />
+        </div>
+        <div class="col-8 d flex-column">
+            <!-- Description -->
+          <div class="heading d-flex">
+            <div class="left">
+              <p class="artist-name"></p>
+              <p class="bold genre"></p>
+            </div>
+          </div>
+            <article class="description">
+            </article>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-black text-center py-4">
+      <div class="container">
+          <div class="text-white-50 small">
+              <div class="mb-2">&copy; itbielidev - ITB - Educational Project</div>
+              <span class="mx-1">&middot;</span>
+              <span>Sobre Nosotros</span>
+              <span class="mx-1">&middot;</span>
+              <span>FAQ's</span>
+          </div>
+      
+  </footer>
     <!-- Load the main script for the player -->
     <script src="main.js"></script>
 </body>
