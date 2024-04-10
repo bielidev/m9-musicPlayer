@@ -1,4 +1,3 @@
-<!-- https://bbbootstrap.com/snippets/bootstrap-5-simple-music-app-template-using-glassmorphism-44296829 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,8 +21,9 @@
 </head>
 
 <body>
+  <h1>Bieli Music Player</h1>
   <div class="container col-12 d-flex">
-    <main class="player container col-8">
+    <main class="player container col-7">
       <!-- Define the section for displaying details -->
       <section class="details">
         <div class="now-playing">PLAYING x OF y</div>
@@ -56,136 +56,235 @@
         <i class="fa fa-volume-up"></i>
       </section>
     </main>
-    <!-- PLAYLIST -->
-    <aside class="container col-4 d-flex flex-column justify-content-center text-center">
-      <h2 class="fw-light fs-3">My Playlist through the years</h2>
-      <section class="text-start">
-        <ul class="player-list rounded-3">
-          <li>
-            <img class="list-cover"
-              src="https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/201711/06/00105111367511____1__640x640.jpg" />
-            <div class="list-info">
-              <div class="info-title">Master of Puppets</div>
-              <div class="info-artist">Metallica</div>
+    <!-- PLAYLIST & LYRICS -->
+    <aside class="container col-5 d-flex flex-column text-center" style="margin-top: 10rem;">
+
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Your Library
+      </button>
+
+      <!-- Modal Playlist-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: black;">
+              <h5 class="modal-title fw-light fs-3" id="exampleModalLabel" style="color: white;">My Playlist through the
+                years</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </li>
-          <li>
-            <img class="list-cover" src="https://i.scdn.co/image/ab67616d0000b273b637449c74ec8501ed2e03aa" />
-            <div class="list-info">
-              <div class="info-title">La Costa del Silencio</div>
-              <div class="info-artist">Mägo de Oz</div>
+            <div class="modal-body" style="background-color: black;">
+              <section class="text-start">
+                <ul class="player-list rounded-3">
+                  <li>
+                    <img class="list-cover"
+                      src="https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/201711/06/00105111367511____1__640x640.jpg" />
+                    <div class="list-info">
+                      <div class="info-title">Master of Puppets</div>
+                      <div class="info-artist">Metallica</div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover" src="https://i.scdn.co/image/ab67616d0000b273b637449c74ec8501ed2e03aa" />
+                    <div class="list-info">
+                      <div class="info-title">La Costa del Silencio</div>
+                      <div class="info-artist">Mägo de Oz</div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover"
+                      src="https://m.media-amazon.com/images/I/618KRNqUL-L._UXNaN_FMwebp_QL85_.jpg" />
+                    <div class="list-info">
+                      <div class="info-title">La Posada de los Muertos</div>
+                      <div class="info-artist">Mägo de Oz</div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover"
+                      src="https://www.granviadiscos.com/wp-content/uploads/2023/05/finisterra-opera-rock.jpg" />
+                    <div class="list-info">
+                      <div class="info-title">La Cruz de Santiago</div>
+                      <div class="info-artist">Mägo de Oz</div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover"
+                      src="https://m.media-amazon.com/images/I/613XT7mqtqL._UXNaN_FMwebp_QL85_.jpg" />
+                    <div class="list-info">
+                      <div class="info-title">Todo Tiene Su Fin</div>
+                      <div class="info-artist">El Barrio</div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover"
+                      src="https://m.media-amazon.com/images/I/91URz+ZyLhL._UF1000,1000_QL80_.jpg" />
+                    <div class="list-info">
+                      <div class="info-title">Paint it Black</div>
+                      <div class="info-artist">The Rolling Stones</div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover"
+                      src="https://m.media-amazon.com/images/I/51qW4nMi7eL._UF894,1000_QL80_.jpg" />
+                    <div class="list-info">
+                      <div class="info-title">Tu Calorro</div>
+                      <div class="info-artist">
+                        Estopa con Muchachito Bombo Infierno
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover" src="https://i.scdn.co/image/ab67616d0000b27325f49ab23f0ec6332efef432" />
+                    <div class="list-info">
+                      <div class="info-title">Bring to Life</div>
+                      <div class="info-artist">Evanescence</div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover" src="https://www.musicroom.com/product/image/medium/dam97358_0.jpg" />
+                    <div class="list-info">
+                      <div class="info-title">Hot 'n Cold</div>
+                      <div class="info-artist">Katy Perry</div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover"
+                      src="https://i.discogs.com/7Ypd8KvM6xx8p4JCnvHfyU7WGVBukVvAzXAPU-azscQ/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMjky/NjQ3LTE1Nzg1NDQ3/MzktOTE5Ny5qcGVn.jpeg" />
+                    <div class="list-info">
+                      <div class="info-title">Wake Me Up</div>
+                      <div class="info-artist">Avicii</div>
+                    </div>
+                  </li>
+                  <li>
+                    <img class="list-cover"
+                      src="https://m.media-amazon.com/images/I/516j8tw2uTL._UX250_FMwebp_QL85_.jpg" />
+                    <div class="list-info">
+                      <div class="info-title">Wake Me Up Before You Go-Go</div>
+                      <div class="info-artist">Wham!</div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
             </div>
-          </li>
-          <li>
-            <img class="list-cover" src="https://m.media-amazon.com/images/I/618KRNqUL-L._UXNaN_FMwebp_QL85_.jpg" />
-            <div class="list-info">
-              <div class="info-title">La Posada de los Muertos</div>
-              <div class="info-artist">Mägo de Oz</div>
+            <div class="modal-footer" style="background-color: black;">
+              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
             </div>
-          </li>
-          <li>
-            <img class="list-cover"
-              src="https://www.granviadiscos.com/wp-content/uploads/2023/05/finisterra-opera-rock.jpg" />
-            <div class="list-info">
-              <div class="info-title">La Cruz de Santiago</div>
-              <div class="info-artist">Mägo de Oz</div>
-            </div>
-          </li>
-          <li>
-            <img class="list-cover" src="https://m.media-amazon.com/images/I/613XT7mqtqL._UXNaN_FMwebp_QL85_.jpg" />
-            <div class="list-info">
-              <div class="info-title">Todo Tiene Su Fin</div>
-              <div class="info-artist">El Barrio</div>
-            </div>
-          </li>
-          <li>
-            <img class="list-cover" src="https://m.media-amazon.com/images/I/91URz+ZyLhL._UF1000,1000_QL80_.jpg" />
-            <div class="list-info">
-              <div class="info-title">Paint it Black</div>
-              <div class="info-artist">The Rolling Stones</div>
-            </div>
-          </li>
-          <li>
-            <img class="list-cover" src="https://m.media-amazon.com/images/I/51qW4nMi7eL._UF894,1000_QL80_.jpg" />
-            <div class="list-info">
-              <div class="info-title">Tu Calorro</div>
-              <div class="info-artist">
-                Estopa con Muchachito Bombo Infierno
-              </div>
-            </div>
-          </li>
-          <li>
-            <img class="list-cover" src="https://i.scdn.co/image/ab67616d0000b27325f49ab23f0ec6332efef432" />
-            <div class="list-info">
-              <div class="info-title">Bring to Life</div>
-              <div class="info-artist">Evanescence</div>
-            </div>
-          </li>
-          <li>
-            <img class="list-cover" src="https://www.musicroom.com/product/image/medium/dam97358_0.jpg"
-              />
-              <div class="list-info">
-            <div class="info-title">Hot 'n Cold</div>
-            <div class="info-artist">Katy Perry</div>
-              </div>
-         </li>
-          <li>
-            <img class="list-cover"
-              src="https://i.discogs.com/7Ypd8KvM6xx8p4JCnvHfyU7WGVBukVvAzXAPU-azscQ/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMjky/NjQ3LTE1Nzg1NDQ3/MzktOTE5Ny5qcGVn.jpeg" />
-            <div class="list-info">
-              <div class="info-title">Wake Me Up</div>
-              <div class="info-artist">Avicii</div>
-            </div>
-          </li>
-          <li>
-            <img class="list-cover" src="https://m.media-amazon.com/images/I/516j8tw2uTL._UX250_FMwebp_QL85_.jpg" />
-            <div class="list-info">
-              <div class="info-title">Wake Me Up Before You Go-Go</div>
-              <div class="info-artist">Wham!</div>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
+      </div>
+      <!-- END PLAYLIST -->
+      <!-- Lyrics -->
+      <section class="container overflow-auto text-start mt-5" style="height: 40rem;">
+        <h5>Master of Puppets</h5>
+        <p>
+          End of passion play, crumbling away
+          I'm your source of self-destruction
+          Veins that pump with fear, sucking darkest clear
+          Leading on your death's construction
+          <br>
+          Taste me, you will see
+          More is all you need
+          Dedicated to
+          How I'm killing you
+          Come crawling faster
+          Obey your master
+          Your life burns faster
+          Obey your master, master
+          Master of puppets, I'm pulling your strings
+          Twisting your mind and smashing your dreams
+          Blinded by me, you can't see a thing
+          Just call my name, 'cause I'll hear you scream
+          Master, master
+          Just call my name, 'cause I'll hear you scream
+          Master, master
+          Needlework the way, never you betray
+          Life of death becoming clearer
+          Pain monopoly, ritual misery
+          Chop your breakfast on a mirror
+          Taste me, you will see
+          More is all you need
+          Dedicated to
+          How I'm killing you
+          Come crawling faster
+          Obey your master
+          Your life burns faster
+          Obey your master, master
+          Master of puppets, I'm pulling your strings
+          Twisting your mind and smashing your dreams
+          Blinded by me, you can't see a thing
+          Just call my name, 'cause I'll hear you scream
+          Master, master
+          Just call my name, 'cause I'll hear you scream
+          Master, master (master)
+          Where's the dreams that I've been after?
+          (Master, master)
+          You promised only lies
+          (Laughter, laughter)
+          All I hear or see is laughter
+          (Laughter, laughter)
+          Laughing at my cries
+          Fix me!
+          Hell is worth all that, natural habitat
+          Just a rhyme without a reason
+          Never-ending maze, drift on numbered days
+          Now your life is out of season
+          I will occupy
+          I will help you die
+          I will run through you
+          Now I rule you too
+          Come crawling faster
+          Obey your master
+          Your life burns faster
+          Obey your master, master
+          Master of puppets, I'm pulling your strings
+          Twisting your mind and smashing your dreams
+          Blinded by me, you can't see a thing
+          Just call my name, 'cause I'll hear you scream
+          Master, master
+          Just call my name, 'cause I'll hear you scream
+          Master, master
+        </p>
       </section>
     </aside>
-<!-- END PLAYLIST -->
+
   </div>
 
   <!-- Artist Section -->
-    <div class="col-12 container mb-4">
-      <h2 class="fw-light fs-1">Artist Bio</h2>
-      <!-- Artist Info -->
-      <div class="col-12 d-flex">
-        <div class="image-container col-4">
-          <img class="rounded-3" style="height: 20rem; width: 20rem"
-            src="" />
-        </div>
-        <div class="col-8 d flex-column">
-            <!-- Description -->
-          <div class="heading d-flex">
-            <div class="left">
-              <p class="artist-name"></p>
-              <p class="bold genre"></p>
-            </div>
+  <div class="col-12 container mb-4">
+    <h2 class="fw-light fs-1">Artist Bio</h2>
+    <!-- Artist Info -->
+    <div class="col-12 d-flex">
+      <div class="image-container col-4">
+        <img class="rounded-3" style="height: 20rem; width: 20rem" src="" />
+      </div>
+      <div class="col-8 d flex-column">
+        <!-- Description -->
+        <div class="heading d-flex">
+          <div class="left">
+            <p class="artist-name fw-bold fs-4"></p>
+            <p class="bold genre"></p>
           </div>
-            <article class="description">
-            </article>
         </div>
+        <article class="description fs-5">
+        </article>
       </div>
     </div>
+  </div>
 
-    <footer class="bg-black text-center py-4">
-      <div class="container">
-          <div class="text-white-50 small">
-              <div class="mb-2">&copy; itbielidev - ITB - Educational Project</div>
-              <span class="mx-1">&middot;</span>
-              <span>Sobre Nosotros</span>
-              <span class="mx-1">&middot;</span>
-              <span>FAQ's</span>
-          </div>
-      
+  <footer class="bg-black text-center py-4">
+    <div class="container">
+      <div class="text-white-50 small">
+        <div class="mb-2">&copy; itbielidev - ITB - Educational Project</div>
+        <span class="mx-1">&middot;</span>
+        <span>Sobre Nosotros</span>
+        <span class="mx-1">&middot;</span>
+        <span>FAQ's</span>
+      </div>
+
   </footer>
-    <!-- Load the main script for the player -->
-    <script src="main.js"></script>
+  <!-- Load the main script for the player -->
+  <script src="main.js"></script>
 </body>
 
 </html>
