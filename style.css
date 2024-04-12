@@ -21,7 +21,7 @@ h1{
 /* Using flex with the column direction to
     align items in a vertical direction */
 .player {
-    height: 95vh;
+    /* height: 95vh; */
     display: flex;
     align-items: center;
     flex-direction: column;
