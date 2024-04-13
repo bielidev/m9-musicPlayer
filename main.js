@@ -1021,7 +1021,20 @@ function updateArtistInfo(track) {
     document.querySelector('.artist-name').textContent = artist.name;
     document.querySelector('.genre').textContent = artist.genre;
     document.querySelector('.description').textContent = artist.bio;
-    document.querySelector('.image-container img').src = artist.image;
+    const container = document.querySelector('.image-container');
+    const image = document.querySelector('.image-container img');
+    // image.onload = () => {
+    //   const height = image.naturalHeight;
+    //   const width = image.naturalWidth;
+    //   if (height > width) {
+    //     container.style.paddingTop = `${((height - width) / width) * 100}%`;
+    //   } else {
+    //     container.style.paddingTop = `${((width - height) / height) * 100}%`;
+    //   }
+    // }
+
+    image.src = artist.image;
+
     document.querySelector('.followers').textContent = artist.followers;
     document.querySelector('.monthly').textContent = artist.monthlyListeners;
   } 

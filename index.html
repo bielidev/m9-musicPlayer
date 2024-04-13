@@ -22,13 +22,13 @@
 
 <body>
   <h1>Bieli Music Player</h1>
-  <div class="container d-flex flex-column gap-5">
-    <main class="player col-12">
+  <div class="container d-flex flex-column flex-lg-row gap-5 gap-lg-0">
+    <main class="player col-12 col-lg-6">
       <!-- Define the section for displaying details -->
       <section class="details">
         <div class="now-playing">PLAYING x OF y</div>
         <div class="track-art"></div>
-        <div class="track-name">Track Name</div>
+        <div class="track-name text-center">Track Name</div>
         <div class="track-artist">Track Artist</div>
       </section>
       <!-- Define the section for displaying track buttons -->
@@ -57,7 +57,7 @@
       </section>
     </main>
     <!-- PLAYLIST & LYRICS -->
-    <aside class="col-12 d-flex flex-column text-center mt-6">
+    <aside class="col-12 col-lg-6 d-flex flex-column text-center mt-6 pt-lg-5">
 
 
       <!-- Button trigger modal -->
@@ -96,17 +96,17 @@
   </div>
 
   <!-- Artist Section -->
-  <div class="col-12 container my-5 d-flex flex-column justify-content-center">
+  <div class="col-12 container my-5">
     <h2 class="fw-light fs-1">Artist Bio</h2>
     <!-- Artist Info -->
-    <div class="d-flex flex-column border-light rounded" style="background: hsla(0, 0%, 100%, 0.55);
+    <div class="row border-light rounded" style="background: hsla(0, 0%, 100%, 0.55);
     backdrop-filter: blur(30px);">
-      <div class="image-container position-relative" style="padding-top: 100%;">
-        <img class="rounded-3 img-fluid position-absolute" style="top: 0; left: 0; width: 100%; height: 100%;"  src="" />
+      <div class="p-0 image-container col-12 col-lg-4">
+        <img class="rounded-3 img-fluid" src="" style="width: 100%;height:100%" />
       </div>
-      <div class="d-flex flex-column p-4 align-items-center">
+      <div class="col-12 col-lg-8 p-4">
         <!-- Description -->
-        <div class="heading d-flex">
+        <div class="heading w-100">
           <div class="left">
             <p class="artist-name fw-bold fs-5"></p>
             <div class="d-flex justify-content-between gap-2 align-items-center">

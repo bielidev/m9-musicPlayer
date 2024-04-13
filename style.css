@@ -188,3 +188,37 @@ i.fa-step-backward {
   .player-list li:last-child {
     margin-bottom: 0;
   }
+
+  .image-container {
+    height: 32rem;
+  }
+
+  @media (min-width: 576px) {
+    .image-container {
+      height: 32rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .image-container {
+      height: 42rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .image-container {
+      height: 20rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .image-container {
+      height: 24rem;
+    }
+  }
+  @media (min-width: 1400px) {
+    .image-container {
+      height: 25rem;
+    }
+  }
+  
